@@ -1,6 +1,6 @@
 name: Deploy in Vercel
 on:
-  pull_request:
+  push:
     branches:
       - main
 jobs:
