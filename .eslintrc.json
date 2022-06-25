@@ -1,3 +1,68 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "plugin:@next/next/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+  },
+  "plugins": [
+      "react",
+      "react-hooks",
+      "@typescript-eslint",
+      "prettier"
+  ],
+  "rules": {
+    "import/no-unresolved": "error",
+    "@typescript-eslint/indent": "off",
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "react/function-component-definition": [2, {
+        "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
+        "unnamedComponents": ["function-expression", "arrow-function"]
+    }],
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-useless-constructor": "off",
+    "no-useless-return": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "default-param-last": "off",
+    "@typescript-eslint/no-empty-function": "off"
+  },
+  "settings": {
+      "import/resolver": {
+          "typescript": {
+              "project": "./tsconfig.json"
+          }
+      }
+  }
 }
