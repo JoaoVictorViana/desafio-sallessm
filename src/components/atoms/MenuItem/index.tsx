@@ -41,7 +41,7 @@ const MenuItemWithSubMenus: React.FC<MenuItemProps> = ({
       </Link>
       <SubMenuContainer>
         {subMenus?.map((subMenu) => (
-          <Link href={subMenu.route}>
+          <Link key={`submenu-${subMenu.label}`} href={subMenu.route}>
             <LinkSection active={router?.pathname === subMenu.route}>
               {subMenu.label}
             </LinkSection>
