@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82|
     steps:
       - uses: actions/checkout@v3
       - name: Cache node modules
@@ -29,23 +30,11 @@ jobs:
       - name: Eslint
         run: npm run lint
 
-      - name: Run Jest tests
-        run: npm run test
-
       - name: Build
         run: npm run build
 
-  cypress-run:
-    runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
-    needs: build
-    strategy:
-      fail-fast: false
-      matrix:
-        containers: [1]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Run Jest tests
+        run: npm run test
 
       - name: 'UI Tests - Chrome'
         uses: cypress-io/github-action@v4
@@ -63,3 +52,5 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+
+      
