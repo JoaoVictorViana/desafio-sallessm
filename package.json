@@ -76,8 +76,6 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "./node_modules/.bin/eslint --fix",
-      "jest --bail --findRelatedTests",
-      "cypress run",
       "git add"
     ]
   }

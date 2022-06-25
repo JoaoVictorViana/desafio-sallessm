@@ -36,15 +36,36 @@ jobs:
         run: npm run build
 
   cypress-run:
-    needs: build
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3, 4, 5]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress run
+      - name: Download the build folders
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+
+      - name: 'UI Tests - Chrome'
         uses: cypress-io/github-action@v4
         with:
+          install: false
+          start: npm run dev
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
           browser: chrome
+          record: true
+          parallel: true
+          group: 'UI - Chrome'
+          spec: cypress/tests/ui/*
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
