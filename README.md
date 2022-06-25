@@ -1,3 +1,5 @@
+[![SM Places](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/8zjry6&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/8zjry6/runs)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

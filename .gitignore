@@ -37,3 +37,5 @@ yarn-error.log*
 cypress/downloads
 cypress/videos
 cypress/screenshots
+
+build-storybook.log
