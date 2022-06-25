@@ -13,4 +13,3 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-args: '--prod'
           vercel-project-id: ${{ secrets.PROJECT_ID}} 
-          working-directory: ./sub-directory
