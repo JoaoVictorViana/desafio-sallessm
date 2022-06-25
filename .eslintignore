@@ -6,3 +6,5 @@ cypress
 *.css
 next-env.d.ts
 next.config.js
+jest.config.js
+cypress.config.ts
