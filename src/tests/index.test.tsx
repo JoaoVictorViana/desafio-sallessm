@@ -7,7 +7,7 @@ describe('Home', () => {
   it('Testando Jest', () => {
     render(<Home />)
 
-    const textPage = screen.getByText('Test font Awesome')
+    const textPage = screen.getByText('Introdução')
 
     expect(textPage).toBeInTheDocument()
   })

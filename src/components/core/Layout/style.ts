@@ -14,4 +14,5 @@ export const LayoutContainer = styled.div`
 
 export const PageContent = styled.div`
   background: #eeeeee 0% 0% no-repeat padding-box;
+  padding: 1.93rem;
 `

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Layout } from '@components/core/Layout'
 import { NextPageWithLayout } from 'types/app'
+import { Dashboard } from '@components/organisms/Dashboard'
 
 const Home: NextPageWithLayout = () => {
-  return <div data-test="example">Test font Awesome</div>
+  return <Dashboard />
 }
 
 export default Home

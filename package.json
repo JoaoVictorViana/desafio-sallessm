@@ -11,13 +11,14 @@
     "prepare": "husky install",
     "test": "jest",
     "test:watch": "jest --watch",
-    "cypress": "cypress open",
+    "cypress": "cypress run",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@next/eslint-plugin-next": "^12.1.6",
