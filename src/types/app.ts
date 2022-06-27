@@ -11,3 +11,9 @@ export type MenuItem = {
   icon: JSX.Element
   subMenus?: { label: string; route: string }[]
 }
+
+export type SocialMediaItem = {
+  link: string
+  icon: JSX.Element
+  dataTestId?: string
+}
