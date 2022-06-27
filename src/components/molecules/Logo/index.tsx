@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { LogoContainer } from './style'
 
@@ -9,15 +10,17 @@ type LogoProps = {
 export const Logo: React.FC<LogoProps> = ({ size }) => {
   return (
     <LogoContainer>
-      <Image
-        priority
-        src="/logo.png"
-        title="Logo image"
-        data-teste="Logo"
-        height="18"
-        width="100"
-        layout={size}
-      />
+      <Link href="/">
+        <Image
+          priority
+          src="/logo.png"
+          title="Logo image"
+          data-teste="Logo"
+          height="18"
+          width="100"
+          layout={size}
+        />
+      </Link>
     </LogoContainer>
   )
 }
