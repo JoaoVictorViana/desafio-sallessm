@@ -39,3 +39,4 @@ cypress/videos
 cypress/screenshots
 
 build-storybook.log
+/storybook-static
