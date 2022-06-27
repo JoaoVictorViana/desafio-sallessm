@@ -20,7 +20,8 @@ interface TableContextProps {
 export const TableContext = createContext<TableContextProps>({
   rows: [],
   tableConfig: {
-    page: 1,
+    total: 1,
+    count: 10,
   },
   selectedRows: [],
 })
@@ -31,7 +32,8 @@ export const TableProvider: React.FC<PropsWithChildren> = (props) => {
   const [rows, setRows] = useState<ProductRow[]>([])
   const [selectedRows, setSelectedRows] = useState<number[]>([])
   const [tableConfig, setTableConfig] = useState<TableConfig>({
-    page: 1,
+    total: 1,
+    count: 10,
   })
 
   const { children } = props
