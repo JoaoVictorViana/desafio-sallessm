@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { LayoutContainer, PageContent } from '@components/core/Layout/style'
+import { LayoutContainer, Page } from '@components/core/Layout/style'
 import { Sidebar } from '.'
 
 export default {
@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Sidebar> = (args) => {
   return (
     <LayoutContainer>
       <Sidebar {...args} />
-      <PageContent />
+      <Page />
     </LayoutContainer>
   )
 }

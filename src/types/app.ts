@@ -17,3 +17,14 @@ export type SocialMediaItem = {
   icon: JSX.Element
   dataTestId?: string
 }
+
+export type TableHeader = {
+  field: string
+  description: string
+  isBold?: boolean
+}
+
+export type TableConfig = {
+  total: number
+  count: number
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { LayoutContainer, PageContent } from '@components/core/Layout/style'
+import { LayoutContainer, Page } from '@components/core/Layout/style'
 import { Dashboard } from '.'
 
 export default {
@@ -12,9 +12,9 @@ const Template: ComponentStory<typeof Dashboard> = () => {
   return (
     <LayoutContainer>
       <div />
-      <PageContent>
+      <Page>
         <Dashboard />
-      </PageContent>
+      </Page>
     </LayoutContainer>
   )
 }

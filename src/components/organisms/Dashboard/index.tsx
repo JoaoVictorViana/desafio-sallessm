@@ -3,18 +3,19 @@ import { socialMediaItems } from '@config/socialMedia'
 import React from 'react'
 import {
   Container,
-  DashboardContent,
+  PageContent,
   DashboardText,
-  DashboardTitle,
+  PageHeader,
+  PageTitle,
 } from './style'
 
 export const Dashboard: React.FC = () => {
   return (
     <Container>
-      <DashboardTitle data-testid="dashboard-introduction">
-        Introdução
-      </DashboardTitle>
-      <DashboardContent>
+      <PageHeader>
+        <PageTitle data-testid="dashboard-introduction">Introdução</PageTitle>
+      </PageHeader>
+      <PageContent>
         <DashboardText>
           Sou João Victor. Tenho experiência em <strong>Front-End</strong> e{' '}
           <strong>Back-End</strong> no desenvolvimento web com{' '}
@@ -28,7 +29,7 @@ export const Dashboard: React.FC = () => {
           Para mais informações siga minhas redes sociais:
         </DashboardText>
         <SocialMedia items={socialMediaItems} />
-      </DashboardContent>
+      </PageContent>
     </Container>
   )
 }

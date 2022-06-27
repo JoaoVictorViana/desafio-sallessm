@@ -6,15 +6,23 @@ export const Container = styled.section`
   justify-content: start;
 `
 
-export const DashboardTitle = styled.h1`
+export const PageTitle = styled.h1`
   font-size: 1.5rem;
   color: #45484a;
   text-align: left;
   letter-spacing: 0px;
+  font-weight: bold;
+  margin: 0;
+`
+
+export const PageHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 2.12rem;
 `
 
-export const DashboardContent = styled.div`
+export const PageContent = styled.div`
   padding: 1rem;
   border-radius: 6px;
   background: #ffffff 0% 0% no-repeat padding-box;

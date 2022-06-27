@@ -1,13 +1,14 @@
 import React from 'react'
 import { Layout } from '@components/core/Layout'
 import { NextPageWithLayout } from 'types/app'
+import { Produto } from '@components/organisms/Produto'
 
-const Produto: NextPageWithLayout = () => {
-  return <div data-test="example">Produto</div>
+const ProdutoPage: NextPageWithLayout = () => {
+  return <Produto />
 }
 
-export default Produto
+export default ProdutoPage
 
-Produto.getLayout = function getLayout(page: React.ReactElement) {
+ProdutoPage.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>
 }

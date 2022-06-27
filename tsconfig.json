@@ -28,29 +28,20 @@
       "@config/*": [
         "./src/config/*"
       ],
-      "@assets/*": [
-        "./src/assets/*"
-      ],
-      "@services/*": [
-        "./src/services/*"
-      ],
       "types/*": [
         "./src/types/*"
       ],
       "@contexts/*": [
         "./src/contexts/*"
       ],
-      "@store/*": [
-        "./src/store/*"
-      ],
       "@styles/*": [
         "./src/styles/*"
       ],
-      "@providers/*": [
-        "./src/providers/*"
-      ],
       "@fetchers/*": [
         "./src/fetchers/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
       ]
     }
   },
