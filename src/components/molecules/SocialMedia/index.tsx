@@ -10,8 +10,11 @@ type SocialMediaProps = {
 export const SocialMedia: React.FC<SocialMediaProps> = ({ items }) => {
   return (
     <Container>
-      {items.map((item) => (
-        <SocialMediaItem {...item} />
+      {items.map((item, index) => (
+        <SocialMediaItem
+          key={`socialMedia-${item.dataTestId}` ?? `socialMedia-${index}`}
+          {...item}
+        />
       ))}
     </Container>
   )

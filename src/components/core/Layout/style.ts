@@ -12,7 +12,10 @@ export const LayoutContainer = styled.div`
   }
 `
 
-export const PageContent = styled.div`
+export const Page = styled.div`
   background: #eeeeee 0% 0% no-repeat padding-box;
   padding: 1.93rem;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 `

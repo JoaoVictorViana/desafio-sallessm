@@ -2,15 +2,26 @@ import { breakPoints } from '@config/style'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  height: 100%;
 
   @media (max-width: ${breakPoints.mobile}px) {
     position: absolute;
+    z-index: 10;
+  }
+`
+
+export const SidebarContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+
+  @media (max-width: ${breakPoints.mobile}px) {
     width: 15rem;
-    height: 100%;
     background: #ffffff 0% 0% no-repeat padding-box;
+    z-index: 10;
   }
 `
 
@@ -30,4 +41,16 @@ export const SidebarFooter = styled.div`
   align-items: center;
   height: 3.25rem;
   width: auto;
+`
+
+export const IconContainer = styled.div`
+  position: absolute;
+  right: -3vh;
+  top: 1vh;
+  float: right;
+  display: none;
+
+  @media (max-width: ${breakPoints.mobile}px) {
+    display: block;
+  }
 `
